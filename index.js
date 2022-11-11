@@ -40,56 +40,56 @@ let sensorMap = require('./sensor_map.json')
 
 // Prometheus Metrics
 const weatherLinkApiReqLatency = new promClient.Gauge({
-  name: 'weatherlink_api_request_latency',
+  name: 'ws_weatherlink_api_request_latency',
   help: 'The time is takes in seconds to retrieve data from WeatherLink API',
   labelNames: ['status', 'station']
 });
 
 const weatherLinkApiReqCounter = new promClient.Counter({
-  name: 'weatherlink_api_request_count',
+  name: 'ws_weatherlink_api_request_count',
   help: 'The number of requests recieved from WeatherLink API',
   labelNames: ['status', 'station']
 });
 
 const wunderGroundApiReqLatency = new promClient.Gauge({
-  name: 'wunderground_api_request_latency',
+  name: 'ws_wunderground_api_request_latency',
   help: 'The time is takes in seconds to send data to WunderGround API',
   labelNames: ['status', 'station']
 });
 
 const wunderGroundApiReqCounter = new promClient.Counter({
-  name: 'wunderground_api_request_count',
+  name: 'ws_wunderground_api_request_count',
   help: 'The number of requests sent to WunderGround API',
   labelNames: ['status', 'station']
 });
 
 const updateCounter = new promClient.Counter({
-  name: 'weather_update_count',
+  name: 'ws_weather_update_count',
   help: 'Count of weather updates',
   labelNames: ['status']
 }); 
 
 const updateIntervalGauge = new promClient.Gauge({
-  name: 'weather_update_interval_mins',
+  name: 'ws_weather_update_interval_mins',
   help: 'The number of mins for expected update interval'
 }); 
 
 updateIntervalGauge.set(updateIntervalMins);
 
 const updateTime = new promClient.Gauge({
-  name: 'weather_update_run_time',
+  name: 'ws_weather_update_run_time',
   help: 'The time in seconds it took to perform a weather update',
   labelNames: ['status']
 });
 
 const wundergroundWeatherStats = new promClient.Gauge({
-  name: 'wunderground_weather_observations',
+  name: 'ws_wunderground_weather_observations',
   help: 'The observations submitted to WunderGround',
   labelNames: ['name', 'station']
 });
 
 const weatherLinkWeatherStats = new promClient.Gauge({
-  name: 'weatherlink_weather_observations',
+  name: 'ws_weatherlink_weather_observations',
   help: 'The observations submitted to WeatherLink',
   labelNames: ['name', 'station']
 });
