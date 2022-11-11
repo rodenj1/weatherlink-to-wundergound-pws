@@ -1,0 +1,18 @@
+{
+  "name": "weatherlink-to-wundergound-pws",
+  "version": "1.0.0",
+  "description": "Send WeatherLink PWS data to Weather Underground PWS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "John Roden <rodenj@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "prom-client": "^14.1.0",
+    "weatherlink": "^1.2.1"
+  }
+}

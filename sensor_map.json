@@ -1,0 +1,14 @@
+{
+  "temp_out": "tempf",
+  "hum_out": "humidity",
+  "bar": "baromin",
+  "wind_speed": "windspeedmph",
+  "wind_gust_10_min": ["windgustmph", "windgustmph_10m"],
+  "wind_dir": "winddir",
+  "rain_rate_in": "rainin",
+  "rain_day_in": "dailyrainin",
+  "uv": "UV",
+  "solar_rad": "solarradiation",
+  "dew_point": "dewptf",
+  "temp_soil_1": "soiltempf"
+}

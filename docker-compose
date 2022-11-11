@@ -1,0 +1,15 @@
+---
+version: "3.8"
+services:
+  weatherlink-to-wundergound-pws:
+    container_name: weatherlink-to-wundergound-pws
+    image: weatherlink-to-wundergound-pws:latest
+    ports:
+      - "3030:3030"
+    restart: "always"
+    environment:
+      - WEATHERLINK_API_KEY=<your_weatherlink_api_key>
+      - WEATHERLINK_API_SECRECT=<your_weatherlink_api_secret>
+      - WEATHERLINK_STATION_ID=<your_weatherlink_station_id>
+      - WUNDERGROUND_ID=<your_wunderground_station_id>
+      - WUNDERGROUND_KEY=<your_wunderground_station_key>
