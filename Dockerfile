@@ -11,7 +11,6 @@ COPY index.js /usr/src/app/
 COPY sensor_map.json /usr/src/app/
 COPY package.json /usr/src/app/
 COPY lib/wunderground.js /usr/src/app/lib/
-COPY sync_v2.js /usr/src/app/
 
 RUN npm install
 
