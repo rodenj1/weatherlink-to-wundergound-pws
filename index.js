@@ -198,6 +198,23 @@ const runCollection = async () => {
 };
 
 
+const shutDown = () => {
+  log.info('Received kill signal, shutting down gracefully');
+  server.close(() => {
+      log.info('Closed out remaining connections');
+      process.exit(0);
+  });
+
+  setTimeout(() => {
+      log.error('Could not close connections in time, forcefully shutting down');
+      process.exit(1);
+  }, 10000);
+};
+
+
+process.on('SIGTERM', shutDown);
+process.on('SIGINT', shutDown);
+
 
 server.get('/metrics', async (req, res) => {
   try {
